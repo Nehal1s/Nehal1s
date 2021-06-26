@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SCroll</title>
+</head>
+<body onload="load()">
+    <div class="popup">
+        <div class="set">
+            <h3>The site supports horizontal scroll thus does not supports mouse scroll. Use arrow keys or click most right or left to navigate</h3>
+            <button onclick="popclose()">Understood</button>
+        </div>
+    </div>
+    <nav class="grab" >
+        <div class="icon1" onclick="grab()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="icons">
+            <a href="#first">
+                <div class="icon">
+                    <img src="home.png" alt="">
+                    <h3>home</h3>
+                </div>
+            </a>
+            <a href="#second">
+            <div class="icon">
+                <img src="project.png" alt="">
+                <h3>project</h3>
+            </div>
+            </a>
+            <a href="#third">
+            <div class="icon">
+                <img src="info-button.png" alt="">
+                <h3>About</h3>
+            </div>
+            </a>
+            <a href="#fourth">
+            <div class="icon">
+                <img src="email.png" alt="">
+                <h3>Contact</h3>
+            </div>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+
+        <section id="First">
+            <div class="home">
+                <div class="about">
+                    <div class="intro">
+                        <div class="name">Hey, I'm Nehal Singh</div>
+                        <div class="carrera">
+                            <p>And I'm just Computer science student who's facinated by UI/UX Designs and How to make then even more complex <br> :)</p>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="imh5hw4hfkw41.jpg" alt="">
+                        <p><span>PS:</span> This is not how i look <br>:)</p>
+                    </div>
+                </div>
+            </div>
+            <a class="right" onclick="fadeup()" href="#Second"></a>
+        </section>
+        <section id="Second">
+            <a class="left" onclick="fadeupnot()" href="#First"></a>
+            <div class="details">
+                <div class="incont">
+                    <div class="image">
+                        <img src="a3010cfb18e80def7b06c99288ccc276.jpg" alt="">
+                    </div>
+                    <div class="side-info">
+                        <h3 class="p-name">Whatever</h3>
+                        <p class="brief">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus illum similique quas, ipsum accusantium aliquid magni ad. Aut,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home">
+                <div class="project">
+                    <div class="p-heading"><h2>PROJECTS</h2></div>
+                    <div class="projects">
+                        <a target="_blank" href="https://burnoutcalculator.herokuapp.com/">
+                            <div class="small-cont">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://mungaliyahat.herokuapp.com/">
+                            <div class="small-cont">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://webennovel.herokuapp.com/">
+                            <div class="small-cont">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://kishandata.herokuapp.com/">
+                            <div class="small-cont ">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="">
+                            <div class="small-cont">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="">
+                            <div class="small-cont">
+                                <div class="card">
+                                    <div class="circle"></div>
+                                    <h2>Cobalt</h2>
+                                    <span id="first">It's been dark</span>
+                                    <span id="second">Indeed</span>
+                                    <span id="third">It feels evil</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="right" onclick="fadeupnot()" href="#thirds"></a>
+        </section>
+        <section id="thirds">
+            <a class="left" onclick="fadeup()" href="#Second"></a>
+            <h1>page three</h1>
+            <a class="right" href="#Fourth"></a>
+        </section>
+        <section id="Fourth">
+            <a class="left" href="#thirds"></a>
+            <h1>page Fourth</h1>
+        </section>
+    </div>
+
+    <!-- just some fire flies -->
+
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
