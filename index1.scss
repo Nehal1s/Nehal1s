@@ -63,7 +63,8 @@ nav{
     flex-direction: column;
     width: 70px;
     height: 100%;
-    background-color: #9f0fef;
+    // background-color: #9f0fef;
+    background: linear-gradient(to bottom, #281533, #1e1424, #2d2233);
     z-index: 3;
     box-shadow: 0 0 60px 30px rgb(0 0 0 / 50%);
     transition: .4s ease-in;
@@ -110,11 +111,11 @@ nav{
 
 
 .card{
-    width: 100%;
     background: linear-gradient(to bottom, #281533, #1e1424, #2d2233);
     color: white;
     position: relative;
     display: flex;
+    height: 200px;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
@@ -139,8 +140,7 @@ nav{
     z-index: 1;
     letter-spacing: 3px;
     transition: 0.7s ease;
-    transform: translateY(40%);
-    transition-delay: 0.6s;
+    transition-delay: 0.4s;
 
 }
 span{
@@ -148,16 +148,13 @@ span{
     font-weight: 600;
     letter-spacing: 2px;
     z-index: 1;
-    opacity: 0;
     transition: 0.7s ease;
     margin: 0.4rem;
 }
 #first{
-    transition-delay: 0.4s;
-}
-#second{
     transition-delay: 0.2s;
 }
+
 .card:hover .circle{
     width: 500px;
     height: 500px;
@@ -171,17 +168,14 @@ span{
 }
 .card:hover span{
     transform: translateY(-30px);
-    opacity: 1;
 }
-
 .card:hover #first{
+    transform: translateY(-30px);
     transition-delay: 0.2s;
 }
-.card:hover #second{
+.card:hover span{
+    transform: translateY(-30px);
     transition-delay: 0.4s;
-}
-.card:hover #third{
-    transition-delay: 0.6s;
 }
 
 .container{
@@ -305,6 +299,7 @@ span{
             img{
                 width: 240px;
                 height: auto;
+                border-radius: 0.6rem;
             }
             opacity: 0;
             transform: translateY(50px);
@@ -369,13 +364,8 @@ span{
                 z-index: 1;
             }
             .small-cont{
-                position: inherit;
-                width: 200px;
-                height: 60%;
-                    border-radius: 0.4rem;
-                    position: static;
                 box-shadow: 0 0 70px 10px rgba(0, 0, 0, 0.233);
-                margin: auto;
+                margin: 0.4rem;
                 color: #fffffe;
                 letter-spacing: 2px;
                 border-radius: 0.2rem;

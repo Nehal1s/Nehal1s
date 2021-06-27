@@ -1,5 +1,5 @@
 
-var secondSection = document.querySelector('#second')
+var secondSection = document.querySelector('.projects')
 var details = document.querySelector('.details')
 var smallCont = document.querySelectorAll(".small-cont");
 
@@ -33,7 +33,7 @@ function fadeup() {
     for (i = 0; i < smallCont.length; i++) {
         smallCont[i].style.opacity = "0";
         smallCont[i].style.animation = "fadeup 0.7s 1 forwards";
-        smallCont[i].style.animationDelay = i/18  +'s';
+        smallCont[i].style.animationDelay = 0.8/(i + 03)  +'s';
     }
 }
 
@@ -65,10 +65,14 @@ function isInViewport(element) {
 
 // conditonal inspector
 function damn() {
-    setTimeout(() => {
+    var epp = setInterval(() => {
         var isIn = isInViewport(secondSection);
+        console.log(isIn);
         isIn ? fadeup() : fadeupnot()
-    }, 700);
+    }, 500);
+    setTimeout(() => {
+        clearInterval(epp)
+    }, 1000);
 }
 
 
@@ -84,17 +88,30 @@ document.onkeydown = (e)=> {
     }
 }
 
+// other shits
+
+document.getElementById('toSecond').addEventListener('click',()=>{
+    fadeup()
+})
+
+document.querySelectorAll('.flusshout').forEach(element => {
+    element.addEventListener('click',()=>{
+        fadeupnot()
+    })
+});
 
 // Some shit that can't do in css or even in scss
 
-const names = ["Mungaliya Haat", "Burnout Calculator", "Web Novel", "My Porfolio", "SOS Location Sharing App", "None"];
-var info = ['It is a promotional Website for Mungaliya Village', 'Burnout Calculator is ML service that predict mental and physiscal stress level of an emplyee', 'Webnovel is a book exchanging platform for BookWorms', 'This is my portfolio as you can see', 'The app delievers an sos message to your close ones to rescue you when shit get real', 'Undefind: OutofIndex']
+const names = ["Mungaliya Haat", "Burnout-predictor", "Car number plate detection model", "My Porfolio", "SOS Location Sharing App", "mAyAnK's portfolio"];
+const info = ['This is an informational website about a village, situated in Madhya Pradesh known as Mughaliya Hat. It presents the names, along with the pictures of all the places to visit in and around the village, information on influential people, families and members of the Gram Panchayat.\n\nMoreover, a graph that constitutes the total population of the village over the years.', 'Burnout-predictor is a machine learning model specifically trained to predict burnout rates (stress level) in employees.\n\nIt takes input from the user and according to the input value, it provides predicted burnout rate, as the output.\n\nTo make things effortless, we also created a user friendly frontend and connected our model to it.', "This project is a neural network model which detects number plates on vehicles (more accurately on cars), Identifies the digits, then stores it into the database. You either upload clips or pictures into the system and the program provides the contents of the the number plate(s).\n\nIt is time saving and makes life easier for theft catching authorities.\n\nWe can further improve this system, if we're able to connect this program directly to the security cameras, it would print the numbers on the spot, furthermore, it would eliminate the need to manually upload clips/images, however this option would still be there, but secondary.", 'This is my portfolio as you can see', 'The app delievers an sos message to your close ones to rescue you when shit get real', 'This is a portfolio i made in my early days of learning Web Development']
 
+const images = ['']
 
 
 var image = document.querySelector('.image')
 var aName = document.querySelector('.p-name')
 var brief = document.querySelector('.brief')
+var img = document.querySelector('.image')
 var i
 for (i = 0; i < smallCont.length; i++) {
     console.log(i);
