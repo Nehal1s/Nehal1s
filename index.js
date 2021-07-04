@@ -2,21 +2,69 @@
 var secondSection = document.querySelector('.projects')
 var details = document.querySelector('.details')
 var smallCont = document.querySelectorAll(".small-cont");
-
+var myAudio = new Audio('sengeki.mp3')
 
 function load(){
     document.querySelector('.name').style.opacity = "0";
     document.querySelector('.carrera').style.opacity = "0"; 
     document.querySelector('.picture').style.opacity = "0"; 
     console.log('loaded');
+    myAudio.volume = 0.05
+    if (typeof myAudio.loop == 'boolean')
+    {
+        myAudio.loop = true;
+    }
+    else
+    {
+        myAudio.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+    }
+    myAudio.play();
 }
+
 var a = true
 function grab() {
     document.querySelector('.grab').classList.toggle( a ? 'snap' : '')
     a != a
 }
 
+document.querySelector('.audioWaves').addEventListener('click', (e)=>{
+    if(!myAudio.paused){
+        document.querySelectorAll('.loading .x').forEach(element => {
+                element.style.animationPlayState = 'paused'
+        });
+        var vol = 0.05
+        var setup = setInterval(() => {
+            if (vol >= 0) {
+                myAudio.volume = vol
+                vol -= 0.01
+            }
+            else{
+                myAudio.pause()
+                clearInterval(setup)
+            }
+        }, 100);
+    }
+    else{
+        document.querySelectorAll('.loading .x').forEach(element => {
+                element.style.animationPlayState = 'running'
+        });
+        var vol = 0.0
+        myAudio.play()
+        var setup = setInterval(() => {
+            if (vol <= 0.08) {
+                myAudio.volume = vol
+                vol += 0.01
+            }
+            else{
+                clearInterval(setup)
+            }
+        }, 100);
+    }
 
+})
 // popup Mechnisms and early animation binder
 function popclose() {
     document.querySelector('.popup').style.display = 'none'
@@ -49,6 +97,17 @@ function fadeupnot() {
         })
     }
 }
+
+//scrolling to views
+
+const scrollContainer = document.querySelector(".container");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY * 10;
+    console.log(evt.deltaY * 10);
+    damn()
+});
 
 
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sine waves</title>
+	<style>
+	body {
+		background-color: white;
+		color: black;
+		margin: 0;
+		padding: 0;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	.loading {
+    width: 100px;
+    height: 30px;
+    position: relative;
+}
+@keyframes loading {
+    0%,100% {top: 0px; filter: hue-rotate(0deg);}
+    25% {top: 15px; filter: hue-rotate(90deg);}
+    50% {top: 0px; filter: hue-rotate(180deg);}
+    75% {top: 15px; filter: hue-rotate(270deg);}
+}
+.loading .x {
+    position: absolute;
+    animation: loading 2s ease-in-out infinite;
+    width: 5px;
+    height: 5px;
+    transition: 0.8s ease-in;
+}
+.loading .x:nth-child(1) {
+    left: 0px;
+    background-color: #2d2233;
+    animation-delay: 0s;
+}
+.loading .x:nth-child(2) {
+    left: 5px;
+    background-color: #2d2233;
+    animation-delay: .1s;
+}
+.loading .x:nth-child(3) {
+    left: 10px;
+    background-color: #2d2233;
+    animation-delay: .2s;
+}
+.loading .x:nth-child(4) {
+    left: 15px;
+    background-color: #2d2233;
+    animation-delay: .3s;
+}
+.loading .x:nth-child(5) {
+    left: 20px;
+    background-color: #2d2233;
+    animation-delay: .4s;
+}
+.loading .x:nth-child(6) {
+    left: 25px;
+    background-color: #2d2233;
+    animation-delay: .5s;
+}
+.loading .x:nth-child(7) {
+    left: 30px;
+    background-color: #2d2233;
+    animation-delay: .6s;
+}
+.loading .x:nth-child(8) {
+    left: 35px;
+    background-color: #2d2233;
+    animation-delay: .7s;
+}
+.loading .x:nth-child(9) {
+    left: 40px;
+    background-color: #2d2233;
+    animation-delay: .8s;
+}
+.loading .x:nth-child(10) {
+    left: 45px;
+    background-color: #2d2233;
+    animation-delay: .9s;
+}
+.loading .x:nth-child(11) {
+    left: 50px;
+    background-color: #2d2233;
+    animation-delay: 1s;
+}
+.loading .x:nth-child(12) {
+    left: 55px;
+    background-color: #2d2233;
+    animation-delay: 1.1s;
+}
+
+.loading .x:nth-child(13) {
+    left: 60px;
+    background-color: #2d2233;
+    animation-delay: 1.2s;
+}
+
+.loading .x:nth-child(14) {
+    left: 65px;
+    background-color: #2d2233;
+    animation-delay: 1.3s;
+}
+	</style>
+</head>
+<body>
+
+<div id="root">
+	<div class="flex-container">
+		<div class="loading">
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+			<div class="x"></div>
+		</div>
+		<div>Please wait...</div>
+	</div>
+</div>
+		
+</body>
+</html>
