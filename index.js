@@ -10,6 +10,7 @@ function load(){
     document.querySelector('.picture').style.opacity = "0"; 
     console.log('loaded');
     myAudio.volume = 0.05
+    myAudio.play();
     if (typeof myAudio.loop == 'boolean')
     {
         myAudio.loop = true;
@@ -21,7 +22,6 @@ function load(){
             this.play();
         }, false);
     }
-    myAudio.play();
 }
 
 var a = true
