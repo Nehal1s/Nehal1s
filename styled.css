@@ -276,6 +276,10 @@ span {
   box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
 }
 
+.bio {
+  width: 70%;
+}
+
 .details {
   position: absolute;
   pointer-events: none;
@@ -338,6 +342,16 @@ span {
   position: relative;
 }
 
+.loading .x {
+  position: absolute;
+  box-shadow: 0 0 0vw 0vw yellow;
+  animation: loading 2s ease-in-out infinite, flash1 6s ease infinite;
+  width: 5px;
+  background-color: #4e4355;
+  height: 5px;
+  transition: 0.8s ease-in;
+}
+
 @keyframes loading {
   0%, 100% {
     top: 0px;
@@ -352,95 +366,82 @@ span {
     top: 15px;
   }
 }
-.loading .x {
-  position: absolute;
-  animation: loading 2s ease-in-out infinite;
-  width: 5px;
-  height: 5px;
-  transition: 0.8s ease-in;
+@keyframes flash1 {
+  0%, 100% {
+    box-shadow: 0 0 0vw 0vw yellow;
+  }
+  5%, 30% {
+    opacity: 1;
+    box-shadow: 0 0 2vw 0.2vw yellow;
+  }
 }
-
 .loading .x:nth-child(1) {
   left: 0px;
-  background-color: #4e4355;
   animation-delay: 0s;
 }
 
 .loading .x:nth-child(2) {
   left: 5px;
-  background-color: #4e4355;
   animation-delay: 0.1s;
 }
 
 .loading .x:nth-child(3) {
   left: 10px;
-  background-color: #4e4355;
   animation-delay: 0.2s;
 }
 
 .loading .x:nth-child(4) {
   left: 15px;
-  background-color: #4e4355;
   animation-delay: 0.3s;
 }
 
 .loading .x:nth-child(5) {
   left: 20px;
-  background-color: #4e4355;
   animation-delay: 0.4s;
 }
 
 .loading .x:nth-child(6) {
   left: 25px;
-  background-color: #4e4355;
   animation-delay: 0.5s;
 }
 
 .loading .x:nth-child(7) {
   left: 30px;
-  background-color: #4e4355;
   animation-delay: 0.6s;
 }
 
 .loading .x:nth-child(8) {
   left: 35px;
-  background-color: #4e4355;
   animation-delay: 0.7s;
 }
 
 .loading .x:nth-child(9) {
   left: 40px;
-  background-color: #4e4355;
   animation-delay: 0.8s;
 }
 
 .loading .x:nth-child(10) {
   left: 45px;
-  background-color: #4e4355;
   animation-delay: 0.9s;
 }
 
 .loading .x:nth-child(11) {
   left: 50px;
-  background-color: #4e4355;
   animation-delay: 1s;
 }
 
 .loading .x:nth-child(12) {
   left: 55px;
-  background-color: #4e4355;
   animation-delay: 1.1s;
 }
 
 .loading .x:nth-child(13) {
   left: 60px;
-  background-color: #4e4355;
   animation-delay: 1.2s;
 }
 
 .loading .x:nth-child(14) {
   left: 65px;
-  background-color: #4e4355;
   animation-delay: 1.3s;
 }
 
