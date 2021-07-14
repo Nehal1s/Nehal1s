@@ -1,5 +1,5 @@
 
-var secondSection = document.querySelector('.projects')
+var secondSection = document.querySelector('.p-heading')
 var details = document.querySelector('.details')
 var smallCont = document.querySelectorAll(".small-cont");
 var myAudio = new Audio('sengeki.mp3')
@@ -8,7 +8,6 @@ function load(){
     document.querySelector('.name').style.opacity = "0";
     document.querySelector('.carrera').style.opacity = "0"; 
     document.querySelector('.picture').style.opacity = "0"; 
-    console.log('loaded');
     myAudio.volume = 0.05
     myAudio.play();
     if (typeof myAudio.loop == 'boolean')
@@ -75,6 +74,12 @@ function popclose() {
     document.querySelector('.picture').style.animationDelay = "0.4s"; 
 }
 
+//cursor
+
+
+if(screen.width > 600){
+    console.log(screen.width);
+
 // animation toggler
 function fadeup() {
     var i
@@ -105,7 +110,6 @@ const scrollContainer = document.querySelector(".container");
 scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
     scrollContainer.scrollLeft += evt.deltaY * 10;
-    console.log(evt.deltaY * 10);
     damn()
 });
 
@@ -126,7 +130,6 @@ function isInViewport(element) {
 function damn() {
     var epp = setInterval(() => {
         var isIn = isInViewport(secondSection);
-        console.log(isIn);
         isIn ? fadeup() : fadeupnot()
     }, 500);
     setTimeout(() => {
@@ -135,15 +138,16 @@ function damn() {
 }
 
 
+
 // keydown inspector
 document.onkeydown = (e)=> {
     switch (e.keyCode) {
         case 37:
             damn();
             break;
-        case 39:
-            damn();
-            break;
+            case 39:
+                damn();
+                break;
     }
 }
 
@@ -173,32 +177,30 @@ var brief = document.querySelector('.brief')
 var img = document.querySelector('.image')
 var i
 for (i = 0; i < smallCont.length; i++) {
-    console.log(i);
     var filles = names[i];
     smallCont[i].setAttribute('id',`${i}`)
     smallCont[i].addEventListener('mouseenter',(e)=>{
-            details.style.opacity = '1'
-            details.style.zIndex  = '5'
-            details.style.background = '#2815338e'
-            details.style.backdropFilter = 'blur(10px)'
-            image.style.transitionDelay = '0s'
-            image.style.opacity = '1'
-            image.style.transform = 'translateY(0px)'
-            aName.style.transitionDelay = '0.2s'
-            aName.style.opacity = '1'
-            aName.innerText = names[e.target.id]
-            aName.style.transform = 'translateY(0px)'
-            brief.style.transitionDelay = '0.4s'
-            brief.style.opacity = '1'
-            brief.style.transform = 'translateY(0px)'
-            brief.innerText = info[e.target.id]
-            // console.log(e.target.getAttribute('id'));
+        details.style.opacity = '1'
+        details.style.zIndex  = '5'
+        details.style.background = '#2815338e'
+        details.style.backdropFilter = 'blur(10px)'
+        image.style.transitionDelay = '0s'
+        image.style.opacity = '1'
+        image.style.transform = 'translateY(0px)'
+        aName.style.transitionDelay = '0.2s'
+        aName.style.opacity = '1'
+        aName.innerText = names[e.target.id]
+        aName.style.transform = 'translateY(0px)'
+        brief.style.transitionDelay = '0.4s'
+        brief.style.opacity = '1'
+        brief.style.transform = 'translateY(0px)'
+        brief.innerText = info[e.target.id]
     })
     smallCont[i].addEventListener('mouseleave',()=>{
         details.style.opacity = '0'
-            image.style.transform = 'translateY(50px)'
-            image.style.transitionDelay = '0.4s'
-            image.style.opacity = '0'
+        image.style.transform = 'translateY(50px)'
+        image.style.transitionDelay = '0.4s'
+        image.style.opacity = '0'
             aName.style.transform = 'translateY(50px)'
             aName.style.transitionDelay = '0.2s'
             aName.style.opacity = '0'
@@ -208,5 +210,24 @@ for (i = 0; i < smallCont.length; i++) {
             details.style.zIndex = '0'
             details.style.backdropFilter = 'none'
             details.style.background = 'none'        
-    })
+        })
+    }
+    
 }
+    //new method for viewposts
+    const square = document.querySelector('.small-cont');
+    square.classList.remove('square-transition');
+    
+    // Create the observer, same as before:
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          square.classList.add('square-transition');
+          return;
+        }
+    
+        square.classList.remove('square-transition');
+      });
+    });
+    
+    observer.observe(document.querySelector('.projects'));

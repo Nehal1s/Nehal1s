@@ -5,13 +5,13 @@
 
 body{
     width: 100vw;
-    height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
 .popup{
-    position: absolute;
+    position: fixed;
     z-index: 10;
     width: 100%;
     height: 100%;
@@ -58,7 +58,7 @@ body{
 
 nav{
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 65px;
@@ -68,6 +68,7 @@ nav{
     z-index: 3;
     box-shadow: 0 0 60px 30px rgb(0 0 0 / 50%);
     transition: .4s ease-in;
+    
     .icons{
         flex: 2;
         display: flex;
@@ -114,6 +115,8 @@ nav{
     background: linear-gradient(to bottom, #281533, #1e1424, #2d2233);
     color: white;
     position: relative;
+    box-shadow: 0 0 70px 10px rgba(139, 137, 137, 0.151);
+    margin: auto;
     display: flex;
     height: 200px;
     flex-direction: column;
@@ -193,7 +196,6 @@ span{
         align-items: center;
         color: white;
         background-color: #2d2233;
-        width: 100vw;
         width: calc(100vw - 60px);
         height: 100vh;
         scroll-margin-left: 60px;
@@ -215,6 +217,7 @@ span{
         .left:hover, .right:hover{
             opacity: 0.4;
         }
+        
     }
 }
 .container::-webkit-scrollbar{
@@ -285,6 +288,10 @@ span{
 
 .bio{
     width: 70%;
+    font-size: 1.5em;
+    h3{
+        font-size: 4em;
+    }
 }
 
 .details{
@@ -477,7 +484,6 @@ span{
                 z-index: 1;
             }
             .small-cont{
-                box-shadow: 0 0 70px 10px rgba(139, 137, 137, 0.151);
                 margin: 0.4rem;
                 color: #fffffe;
                 letter-spacing: 2px;
@@ -516,14 +522,10 @@ span{
     }
 }
 
-.card:hover .container{
-    background-color: white;
-}
 
-
-//   media quearies/////////
-@media (max-width: 845px) {
-    .home .project .projects{
-        grid-template-rows: repeat(3, minmax(180px, 1fr) );
-    }
-}
+// //   media quearies/////////
+// @media (max-width: 845px) {
+//     .home .project .projects{
+//         grid-template-rows: repeat(3, minmax(180px, 1fr) );
+//     }
+// }

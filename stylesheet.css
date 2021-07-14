@@ -1,0 +1,109 @@
+body {
+  background: #fffffe;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+nav {
+  overflow: visible;
+  flex-direction: row;
+  width: 100%;
+  bottom: 0px;
+  height: auto;
+}
+nav .icon {
+  padding: 0.6rem;
+  flex-direction: column;
+}
+nav .icon h3 {
+  margin: 0.3rem;
+}
+nav .icon1 {
+  display: none;
+}
+nav .icons {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.audioWaves {
+  left: 20px;
+  bottom: 80px;
+  position: fixed;
+}
+
+.container {
+  display: block;
+}
+.container section {
+  height: auto;
+  width: 100%;
+}
+.container section .verbirator {
+  display: none;
+}
+.container section .about {
+  flex-direction: column;
+}
+.container section .about .intro {
+  width: 100%;
+  margin-top: 2.4rem;
+}
+.container section .about .name {
+  font-size: 2.5em;
+}
+.container section:nth-child(1) {
+  margin-left: 0px;
+}
+.container section .left {
+  display: none;
+}
+.container section .right {
+  display: none;
+}
+.container section .home .project {
+  text-align: center;
+}
+.container section .home .project .projects {
+  grid-template-columns: auto;
+}
+.container section .home .small-cont .card {
+  max-width: 350px;
+}
+.container section .bio {
+  width: 100%;
+  padding: 2rem;
+}
+.container section .bio h3 {
+  font-size: 2em;
+}
+.container section .flash {
+  margin-bottom: 5rem;
+  height: 100px;
+  justify-content: flex-start;
+}
+.container section .flash .gope {
+  width: 60px;
+  height: 60px;
+}
+.container section .flash .gope img {
+  width: 50px;
+  height: 50px;
+}
+
+.fadeup {
+  opacity: 0;
+  animation: fadeup 0.7s 1 forwards;
+}
+
+.fadeupnot {
+  opacity: 1;
+  animation: fadedown 0.4s 1 forwards;
+}
+
+.square-transition {
+  opacity: 1;
+  transform: none;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

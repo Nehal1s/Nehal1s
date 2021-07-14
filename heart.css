@@ -5,6 +5,8 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.616);
     pointer-events: none;
+    transition: .3s ease-in;
+    opacity: 0;
 }
 .flash{
     width: 300px;
@@ -17,6 +19,7 @@
 }
 .flash:hover ~ .verbirator{
     z-index: 2;
+    opacity: 1;
 }
 .flash:hover{
     z-index: 3;

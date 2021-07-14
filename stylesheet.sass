@@ -1,0 +1,84 @@
+
+$primaryColor: #fffffe
+body
+    background: $primaryColor
+    color: #000000
+    overflow-x: hidden
+
+nav
+    overflow: visible
+    flex-direction: row
+    width: 100%
+    bottom: 0px
+    height: auto
+    .icon
+        padding: 0.6rem
+        flex-direction: column
+        h3
+            margin: 0.3rem
+    .icon1
+        display: none
+    .icons
+        flex-direction: row
+        justify-content: space-evenly
+
+
+
+.audioWaves
+    left: 20px
+    bottom: 80px
+    position: fixed
+.container
+    display: block
+    section
+        .verbirator
+            display: none
+        height: auto
+        .about
+            flex-direction: column
+            .intro
+                width: 100%
+                margin-top: 2.4rem
+            .name
+                font-size: 2.5em
+        width: 100%
+        &:nth-child(1)
+            margin-left: 0px
+            
+        .left
+            display: none
+        .right
+            display: none
+        .home
+            .project
+                text-align: center
+                .projects
+                    grid-template-columns: auto
+            .small-cont
+                // transform: scale(1.2)
+                .card
+                    max-width: 350px
+        .bio
+            width: 100%
+            padding: 2rem
+            h3
+                font-size: 2em
+        .flash
+            margin-bottom: 5rem
+            height: 100px
+            justify-content: flex-start
+            .gope
+                width: 60px
+                height: 60px
+                img
+                    width: 50px
+                    height: 50px
+.fadeup
+    opacity: 0
+    animation: fadeup 0.7s 1 forwards
+.fadeupnot
+    opacity: 1
+    animation: fadedown 0.4s 1 forwards
+.square-transition
+    opacity: 1
+    transform: none
