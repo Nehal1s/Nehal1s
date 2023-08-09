@@ -86,7 +86,7 @@ function fadeup() {
     for (i = 0; i < smallCont.length; i++) {
         smallCont[i].style.opacity = "0";
         smallCont[i].style.animation = "fadeup 0.7s 1 forwards";
-        smallCont[i].style.animationDelay = 0.8/(i + 03)  +'s';
+        smallCont[i].style.animationDelay = 0.8/(i + 3)  +'s';
     }
 }
 
