@@ -169,7 +169,7 @@ const names = ["DomeFavour", "Burnout-predictor", "My Game Portfolio", "My Porfo
 const info = ['DomeFovour is a in-progress project which is consist of a project hunting platform which gives new student of interested Student or user to make a project and hunt for memeber that are interested or Join one themselves', 'Burnout-predictor is a machine learning model specifically trained to predict burnout rates (stress level) in employees.\n\nIt takes input from the user and according to the input value, it provides predicted burnout rate, as the output.\n\nTo make things effortless, we also created a user friendly frontend and connected our model to it.', 'Believe it or not I make games as well.\nClick to see my Game Portfolio, none of my game are published btw.....', 'This is my portfolio as you can see', 'Contains my latest knowledge of flexboxes and animations', 'This is a portfolio i made in my early days of learning Web Development']
 const images = ['']
 
-
+ 
 var image = document.querySelector('.image')
 var aName = document.querySelector('.p-name')
 var brief = document.querySelector('.brief')
